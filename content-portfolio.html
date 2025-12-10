@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Martina S. Tacconis</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <script src="js/script.js" defer></script>
+</head>
+<body class="page">
+  <!-- HEADER -->
+  <header>
+    <nav class="navbar">
+      <div class="nav-brand">MARTINA S. TACCONIS</div>
+      <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="case-studies.html">Case Studies</a>
+        <a href="content-portfolio.html" class="active">Content</a>
+        <a href="influencer-script.html">Influencer Campaign</a>
+        <a href="ads-analytics.html">Ads + Analytics</a>
+        <a href="psychology-marketing.html">Psychology</a>
+        <a href="about.html">About</a>
+        <a href="contact.html" class="nav-cta">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="section">
+      <div class="section-header">
+        <h1 class="section-title">Content Portfolio</h1>
+        <p class="section-subtitle">
+          A snapshot of Instagram-style posts and campaign visuals. Scroll like a feed, click any tile to
+          open it full-screen.
+        </p>
+      </div>
+
+      <!-- GRIGLIA 3x3 STILE INSTAGRAM -->
+      <div class="image-grid">
+        <!-- POST 1 -->
+        <div
+          class="image-card"
+          data-lightbox-src="assets/images/ig-1-large.jpg"
+        >
+          <!-- thumb: può essere uguale alla large se non hai versioni diverse -->
+          <img src="assets/images/ig-1-thumb.jpg" alt="Instagram post – cashback launch" />
+          <div class="image-card-label">
+            <span>Cashback launch</span>
+            <span>Feed</span>
+          </div>
+        </div>
+
+        <!-- POST 2 -->
+        <div
+          class="image-card"
+          data-lightbox-src="assets/images/ig-2-large.jpg"
+        >
+          <img src="assets/images/ig-2-thumb.jpg" alt="Educational carousel about saving" />
+          <div class="image-card-label">
+            <span>Financial tips</span>
+            <span>Carousel</span>
+          </div>
+        </div>
+
+        <!-- POST 3 -->
+        <div
+          class="image-card"
+          data-lightbox-src="assets/images/ig-3-large.jpg"
+        >
+          <img src="assets/images/ig-3-thumb.jpg" alt="Influencer collaboration post" />
+          <div class="image-card-label">
+            <span>Influencer collab</span>
+            <span>Paid</span>
+          </div>
+        </div>
+
+        <!-- POST 4 -->
+        <div
+          class="image-card"
+          data-lightbox-src="assets/images/ig-4-large.jpg"
+        >
+          <img src="assets/images/ig-4-thumb.jpg" alt="In-app feature highlight" />
+          <div class="image-card-label">
+            <span>Feature highlight</span>
+            <span>Story</span>
+          </div>
+        </div>
+
+        <!-- POST 5 -->
+        <div
+          class="image-card"
+          data-lightbox-src="assets/images/ig-5-large.jpg"
+        >
+          <img src="assets/images/ig-5-thumb.jpg" alt="UGC-style post" />
+          <div class="image-card-label">
+            <span>UGC moment</span>
+            <span>Organic</span>
+          </div>
+        </div>
+
+        <!-- POST 6 -->
+        <div
+          class="image-card"
+          data-lightbox-src="assets/images/ig-6-large.jpg"
+        >
+          <img src="assets/images/ig-6-thumb.jpg" alt="Promotional campaign post" />
+          <div class="image-card-label">
+            <span>Promo</span>
+            <span>Campaign</span>
+          </div>
+        </div>
+
+        <!-- POST 7 -->
+        <div
+          class="image-card"
+          data-lightbox-src="assets/images/ig-7-large.jpg"
+        >
+          <img src="assets/images/ig-7-thumb.jpg" alt="Community highlight" />
+          <div class="image-card-label">
+            <span>Community</span>
+            <span>Feed</span>
+          </div>
+        </div>
+
+        <!-- POST 8 -->
+        <div
+          class="image-card"
+          data-lightbox-src="assets/images/ig-8-large.jpg"
+        >
+          <img src="assets/images/ig-8-thumb.jpg" alt="Financial education reel cover" />
+          <div class="image-card-label">
+            <span>Reel cover</span>
+            <span>Reel</span>
+          </div>
+        </div>
+
+        <!-- POST 9 -->
+        <div
+          class="image-card"
+          data-lightbox-src="assets/images/ig-9-large.jpg"
+        >
+          <img src="assets/images/ig-9-thumb.jpg" alt="Brand storytelling post" />
+          <div class="image-card-label">
+            <span>Brand story</span>
+            <span>Feed</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Puoi aggiungere altre righe copiando i blocchi sopra -->
+    </section>
+  </main>
+
+  <!-- LIGHTBOX (uguale alle altre pagine, riutilizza lo stesso JS) -->
+  <div class="lightbox-overlay">
+    <div class="lightbox-content">
+      <button class="lightbox-close">&times;</button>
+      <img src="" alt="Expanded content" class="lightbox-image" />
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-inner">
+      <span>© 2025 Martina Silvia Tacconis. All rights reserved.</span>
+    </div>
+  </footer>
+</body>
+</html>
