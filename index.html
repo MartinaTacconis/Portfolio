@@ -6,6 +6,49 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="css/styles.css" />
   <script src="js/script.js" defer></script>
+  <style>
+    .hero-header {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+    .hero-top-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+    }
+    .hero-top-row .pill {
+      margin: 0;
+    }
+    .hero-title .hero-name-line {
+      display: inline;
+    }
+    .btn-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+    @media (max-width: 900px) {
+      .hero-grid {
+        display: block !important;
+      }
+      .hero-side-column {
+        margin-top: 1.5rem;
+      }
+      .hero-title .hero-name-line {
+        display: block;
+        text-align: center;
+      }
+      .btn-row .btn {
+        flex: 1 1 calc(50% - 0.75rem);
+      }
+      .btn-row .btn-third {
+        flex-basis: 100%;
+        text-align: center;
+      }
+    }
+  </style>
 </head>
 <body class="page">
   <!-- HEADER -->
@@ -29,20 +72,51 @@
   <main class="container">
     <!-- HERO -->
     <section class="hero">
-      <div class="hero-grid">
+      <div class="hero-grid" style="display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 1.2fr); gap: 2rem; align-items: flex-start;">
         <div class="hero-card">
-          <div class="pill">
-            <span class="pill-dot"></span>
-            Digital Marketing Executive
+          <div class="hero-header">
+            <div class="hero-top-row">
+              <div class="pill">
+                <span class="pill-dot"></span>
+                Digital Marketing Executive
+              </div>
+              <div class="profile-photo-wrapper">
+                <img src="assets/images/profile.jpeg" alt="Photo of Your Name" />
+              </div>
+            </div>
+            <h1 class="hero-title">
+              <span class="hero-name-line hero-name-line-1">Martina S.</span>
+              <span class="hero-name-line hero-name-line-2">Tacconis</span>
+            </h1>
+            <p class="hero-subtitle">
+              Digital Marketing Executive · Content &amp; Growth · Psychology + Data-Driven Approach
+            </p>
           </div>
-          <h1 class="hero-title">Martina S. Tacconis</h1>
-          <p class="hero-subtitle">
-            Digital Marketing Executive · Content &amp; Growth · Psychology + Data-Driven Approach
-          </p>
+
           <p class="hero-intro">
             I’m a psychology graduate and digital marketer who loves turning data, creativity, and human behaviour
             insights into campaigns that genuinely connect with people.
           </p>
+
+          <div class="chip-row">
+            <span class="chip">Content &amp; Growth</span>
+            <span class="chip">Influencer Marketing</span>
+            <span class="chip">Data-Informed Strategy</span>
+            <span class="chip">Behavioural Insights</span>
+          </div>
+
+          <div class="btn-row">
+           <a href="about.html" class="btn btn-primary">About me</a>
+            <a href="assets/Martina S. Tacconis - CV.pdf" class="btn btn-outline" target="_blank" rel="noopener">
+              Download CV
+            </a>
+            
+            <a href="contact.html" class="btn btn-primary btn-third">Let’s work together →</a>
+          </div>
+
+          <div class="tag-row">
+            
+          </div>
 
           <div class="hero-highlights">
             <div class="hero-highlight">
@@ -62,70 +136,36 @@
               <span>Onboarded, with 2x cashback vs competitors</span>
             </div>
           </div>
-
-          <div class="btn-row">
-            <!-- Sostituisci # con il link alla pagina case studies -->
-            <a href="case-studies.html" class="btn btn-primary">View Portfolio</a>
-            <!-- Metti qui il link al tuo CV -->
-            <a href="assets/Martina S. Tacconis - CV.pdf" class="btn btn-outline" target="_blank" rel="noopener">
-              Download CV
-            </a>
-          </div>
         </div>
-
-        <aside class="hero-side-card">
-          <div class="profile-photo-wrapper">
-            <!-- Sostituisci src con la tua foto LinkedIn -->
-            <img src="assets/images/profile.jpeg" alt="Photo of Your Name" />
-          </div>
-          <h2>Martina S. Tacconis</h2>
-          <p>Psychology graduate | UCL · Digital Marketing Executive | TopCashback</p>
-          <div class="chip-row">
-            <span class="chip">Content &amp; Growth</span>
-            <span class="chip">Influencer Marketing</span>
-            <span class="chip">Data-Informed Strategy</span>
-            <span class="chip">Behavioural Insights</span>
-          </div>
-          <div class="tag-row">
-            <a href="about.html" class="tag accent">About me</a>
-            <a href="contact.html" class="tag">Let’s work together →</a>
-          </div>
+        <aside class="hero-side-column" style="display: flex; flex-direction: column; gap: 1rem;">
+          <a href="case-studies.html" class="card" style="text-decoration: none;">
+            <h3 class="card-title">Case Studies</h3>
+            <p>Short PDF breakdowns of campaigns, growth experiments, and collaborations.</p>
+            <div class="tag-row">
+              <span class="tag">Acquisition</span>
+              <span class="tag">Retention</span>
+            </div>
+          </a>
+          <a href="content-portfolio.html" class="card" style="text-decoration: none;">
+            <h3 class="card-title">Content Portfolio</h3>
+            <p>Instagram posts, campaign visuals, influencer scripts &amp; briefing materials.</p>
+            <div class="tag-row">
+              <span class="tag">Creative</span>
+              <span class="tag">Social</span>
+            </div>
+          </a>
+          <a href="psychology-marketing.html" class="card" style="text-decoration: none;">
+            <h3 class="card-title">Psychology &amp; Marketing</h3>
+            <p>How my UCL psychology training meets data, growth and content at Heyr.</p>
+            <div class="tag-row">
+              <span class="tag">Behavioural</span>
+              <span class="tag">Human-first</span>
+            </div>
+          </a>
         </aside>
       </div>
     </section>
 
-    <!-- QUICK NAV SECTION -->
-    <section class="section">
-      <div class="section-header">
-        <h2 class="section-title">Explore the portfolio</h2>
-      </div>
-      <div class="grid grid-3">
-        <a href="case-studies.html" class="card" style="text-decoration: none;">
-          <h3 class="card-title">Case Studies</h3>
-          <p>Short PDF breakdowns of campaigns, growth experiments, and collaborations.</p>
-          <div class="tag-row">
-            <span class="tag">Acquisition</span>
-            <span class="tag">Retention</span>
-          </div>
-        </a>
-        <a href="content-portfolio.html" class="card" style="text-decoration: none;">
-          <h3 class="card-title">Content Portfolio</h3>
-          <p>Instagram posts, campaign visuals, influencer scripts &amp; briefing materials.</p>
-          <div class="tag-row">
-            <span class="tag">Creative</span>
-            <span class="tag">Social</span>
-          </div>
-        </a>
-        <a href="psychology-marketing.html" class="card" style="text-decoration: none;">
-          <h3 class="card-title">Psychology &amp; Marketing</h3>
-          <p>How my UCL psychology training meets data, growth and content at Heyr.</p>
-          <div class="tag-row">
-            <span class="tag">Behavioural</span>
-            <span class="tag">Human-first</span>
-          </div>
-        </a>
-      </div>
-    </section>
   </main>
 
   <!-- LIGHTBOX -->
