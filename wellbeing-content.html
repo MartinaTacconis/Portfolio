@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Martina S. Tacconis – Influencer Campaign</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <script src="js/script.js" defer></script>
+  <style>
+    /* Layout for wellbeing cards using flex columns: left = two stacked cards, right = video card */
+    .influencer-grid {
+      display: flex;
+      align-items: flex-start;
+      gap: 1.5rem;
+    }
+
+    /* Left column: wellbeing script on top, CBT card underneath */
+    .wellbeing-column-left {
+      flex: 1 1 0;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    /* Right column: youth-centered copy + video */
+    .youth-video-card {
+      flex: 1 1 0;
+    }
+
+    .influencer-media-card {
+      width: 100%;
+      margin: 0;
+    }
+
+    .media-video-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+    }
+
+    .media-video {
+      width: 80%;
+      border-radius: 12px;
+      display: block;
+      margin: 0 auto;
+    }
+
+    /* Ensure bulleted lists are visible on this page */
+    .section .about-list {
+      list-style: disc;
+      padding-left: 1.25rem;
+    }
+
+    @media (max-width: 800px) {
+      .influencer-grid {
+        flex-direction: column;
+      }
+
+      .wellbeing-column-left,
+      .youth-video-card {
+        flex: 1 1 auto;
+      }
+    }
+  </style>
+</head>
+<body class="page">
+  <!-- HEADER -->
+  <header>
+    <nav class="navbar">
+      <div class="nav-brand">MARTINA S. TACCONIS</div>
+      <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="case-studies.html">Case Studies</a>
+        <a href="content-portfolio.html">Content</a>
+        <a href="ads-analytics.html">Ads + Analytics</a>
+        <a href="psychology-marketing.html">Psychology</a>
+        <a href="about.html">About</a>
+        <a href="contact.html" class="nav-cta">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="section">
+      <div class="section-header">
+        <h1 class="section-title">Wellbeing content</h1>
+        <p class="section-subtitle">
+          An influencer script tailored for Italian students: from hook and structure on the left, to key
+          contributions and skills demonstrated on the right.
+          <br />
+           </p>
+      </div>
+
+      <div class="influencer-grid">
+        <div class="wellbeing-column-left">
+          <!-- LEFT COLUMN, TOP: Wellbeing script -->
+          <article class="card wellbeing-script-card">
+            <h2 class="card-title">Wellbeing script – anger management</h2>
+            <p>
+              Great job for acknowledging how you deal with your anger! Another really important step is to
+              identify our triggers. Triggers can be very specific and vary from person to person but here are
+              some examples of what can trigger anger. Do any of these trigger your anger?
+            </p>
+            <ul class="about-list">
+              <li>Situational events such as traffic jams, computer problems, or ringing phones.</li>
+              <li>People not doing what you expect them to do.</li>
+              <li>People taking advantage of you or lying to you.</li>
+              <li>Being blamed, insulted, or made fun of.</li>
+              <li>A combination of any of the above.</li>
+              <li>I don’t know.</li>
+            </ul>
+
+            <p>
+              Well done! Now that you have identified your triggers you’re halfway there! Identifying triggers
+              can help you stop an anger outburst before it occurs. Here are some ways you could calm your
+              anger… which of these would you want to try out this week?
+            </p>
+            <ul class="about-list">
+              <li>Remove yourself from the situation – e.g. go take a walk.</li>
+              <li>Take slow deep breaths and concentrate on your chest.</li>
+              <li>Concentrate on slowly counting up to 10.</li>
+              <li>None of these.</li>
+            </ul>
+
+            <p>
+              Other than managing your anger in the moment, it can be helpful to take care of it on a daily
+              basis. Here are some helpful techniques you can use… which would you be comfortable starting with?
+            </p>
+            <ul class="about-list">
+              <li>Exercise regularly.</li>
+              <li>Avoid using drugs or drinking too much alcohol.</li>
+              <li>Keep a diary of how you feel when you’re angry.</li>
+              <li>Try consistently getting 7–9 hours of sleep.</li>
+              <li>None of the above.</li>
+            </ul>
+          </article>
+
+          <!-- LEFT COLUMN, BOTTOM: CBT-style conversation directly under Wellbeing script -->
+          <article class="card cbt-card">
+            <h2 class="card-title">Designing a CBT-Style Conversation for Self-Help Users</h2>
+            <ul class="about-list">
+              <li>
+                <strong>Translated clinical research into accessible, empathetic guidance</strong>
+                <br />
+                Drew on evidence-based protocols (e.g., Deffenbacher &amp; McKay, 2000) and transformed complex
+                psychological concepts into warm, user-friendly language suitable for a self-help audience.
+              </li>
+              <li>
+                <strong>Designed a conversation that mirrors a real CBT therapeutic flow</strong>
+                <br />
+                Structured the dialogue to naturally follow core CBT stages, ensuring both psychological accuracy
+                and ease of engagement for users:
+                <ol>
+                  <li>Identifying triggers</li>
+                  <li>Recognising early signs &amp; interrupting the cycle</li>
+                  <li>Introducing longer-term lifestyle strategies</li>
+                  <li>Using positive reinforcement</li>
+                </ol>
+              </li>
+            </ul>
+          </article>
+        </div>
+
+        <!-- RIGHT COLUMN: Relatable youth-centered + video -->
+        <article class="card influencer-media-card youth-video-card">
+          <h2 class="card-title">Designing Relatable, Youth-Centered Therapeutic Conversations</h2>
+          <p>
+            This conversation design shows my careful adaptation of messaging to the needs and background of users, in this case young adults.
+          </p>
+          <p>
+            I intentionally used emojis, GIFs, and friendly, supportive language to mirror young adults' communication style, making the content feel more relatable and human.
+          </p>
+          <p>
+            This ensured that the therapeutic guidance remained engaging and approachable without losing scientific accuracy.
+          </p>
+          <div class="media-video-wrapper">
+            <video
+              src="assets/video/heyr.mp4"
+              class="media-video"
+              autoplay
+              muted
+              loop
+              playsinline
+            >
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <!-- LIGHTBOX (se in futuro vuoi aggiungere l'immagine originale dello script) -->
+  <div class="lightbox-overlay">
+    <div class="lightbox-content">
+      <button class="lightbox-close">&times;</button>
+      <img src="" alt="Expanded content" class="lightbox-image" />
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-inner">
+      <span>© 2025 Martina Silvia Tacconis.</span>
+      
+    </div>
+  </footer>
+</body>
+</html>
