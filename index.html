@@ -5,85 +5,14 @@
   <title>Martina S. Tacconis</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="css/styles.css" />
-  <script src="js/script.js" defer></script>
-  <style>
-    .hero-header {
-      display: flex;
-      flex-direction: column;
-      gap: 0.75rem;
-    }
-    .hero-top-row {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 1rem;
-    }
-    .hero-top-row .pill {
-      margin: 0;
-    }
-    .hero-title .hero-name-line {
-      display: inline;
-    }
-    .btn-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.75rem;
-      justify-content: center; /* center buttons within the hero card width */
-    }
-    /* Make C-Pro tags fit on a single line */
-    .C-Pro {
-      font-size: 0.8rem;
-      padding: 0.15rem 0.5rem;
-      white-space: nowrap;
-    }
-
-    /* Adaptive chip row: wrap chips on smaller screens */
-    .chip-row {
-      display: flex;
-      flex-wrap: wrap; /* allow wrapping on smaller widths */
-      gap: 0.5rem;
-      justify-content: center;
-    }
-
-    .chip-row .chip {
-      white-space: nowrap;
-      font-size: 0.7rem;
-      padding: 0.15rem 0.5rem;
-    }
-
-    @media (max-width: 900px) {
-      .hero-grid {
-        display: block !important;
-      }
-      .hero-side-column {
-        margin-top: 1.5rem;
-      }
-      .hero-title .hero-name-line {
-        display: block;
-        text-align: center;
-      }
-      .btn-row .btn {
-        flex: 1 1 calc(50% - 0.75rem);
-      }
-      .btn-row .btn-third {
-        flex-basis: 100%;
-        text-align: center;
-      }
-    }
-  </style>
 </head>
-<body class="page">
+<body class="page" id="top">
   <!-- HEADER -->
   <header>
     <nav class="navbar">
-      <div class="nav-brand">MARTINA S. TACCONIS</div>
-      <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+      <a href="#top" class="nav-brand">MARTINA S. TACCONIS</a>
       <div class="nav-links">
-        <a href="index.html" class="active">Home</a>
-        <a href="case-studies.html">Case Studies</a>
-        <a href="content-portfolio.html">Content</a>
-        <a href="about.html">About</a>
-        <a href="contact.html" class="nav-cta">Contact</a>
+        <a href="#contact" class="nav-cta">Contact</a>
       </div>
     </nav>
   </header>
@@ -149,12 +78,12 @@
           </div>
 
           <div class="btn-row">
-           <a href="about.html" class="btn btn-primary">About me</a>
+           
             <a href="assets/Martina S. Tacconis - CV.pdf" class="btn btn-outline" target="_blank" rel="noopener">
               Download CV
             </a>
             
-            <a href="contact.html" class="btn btn-primary btn-third">Let’s work together →</a>
+           <a href="#contact" class="btn btn-primary btn-third">Let’s work together →</a>
           </div>
 
           <div class="tag-row">
@@ -166,24 +95,244 @@
           
         </div>
         <aside class="hero-side-column" style="display: flex; flex-direction: column; gap: 1rem;">
-          <a href="case-studies.html" class="card" style="text-decoration: none;">
-            <h3 class="card-title">Case Studies</h3>
-            <p>Short PDF breakdowns of campaigns, growth experiments, and collaborations.</p>
-            <div class="tag-row">
+          
+          <article class="card">
+            <h3 class="card-title">Background &amp; Languages</h3>
+            <ul class="about-list">
+              <li>Bsc Psychology graduate (UCL) | First Class Honours</li>
+            </ul>
+
+            <h3 style="margin-top: 1rem; font-size: 0.95rem;">Languages</h3>
+            <div class="badge-row">
+              <span class="badge">English</span>
+              <span class="badge">Italian</span>
             </div>
-          </a>
-          <a href="content-portfolio.html" class="card" style="text-decoration: none;">
-            <h3 class="card-title">Content Portfolio</h3>
-            <p>Instagram posts, campaign visuals, content scripts &amp; briefing materials.</p>
+
+            <h3 style="margin-top: 1rem; font-size: 0.95rem;">Beyond work</h3>
+            <p style="margin-top: 0.4rem;">
+              I recently completed an incredibly formative gap year, where I strengthened my adaptability,
+              cross-cultural communication and EQ through Yoga Teacher trainings, volunteering projects and travel.
+              I’m now motivated to bring this blend of transferable skills into my work and contribute meaningful value.
+            </p>
+          </article>
+        </aside>
+      </div>
+    </section>
+
+    <!-- MERGED ABOUT SECTION -->
+    <section class="section">
+      <div class="section-header">
+        <h2 class="section-title">About me</h2>
+       <p class="section-subtitle">
+          A short overview of who I am, what I care about, and how I work.
+        </p>
+      </div>
+
+      <div class="about-merged-grid">
+        <article class="card">
+          <h3 class="card-title">Who I am</h3>
+          <p>
+            I’m a psychology graduate and digital marketer who loves understanding what people need
+            and creating digital experiences that make their journey easier and more engaging,
+            whether through content, campaigns or partnerships.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3 class="card-title">What motivates me</h3>
+          <ul class="about-list" style="list-style: disc; padding-left: 1.25rem;">
+            <li>Working on services or products that improve people's lives.</li>
+            <li>Turning complex ideas into clear, simple stories.</li>
+            <li>Continuously learning and experimenting.</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3 class="card-title">Values</h3>
+          <ul class="about-list" style="list-style: disc; padding-left: 1.25rem;">
+            <li>Creativity grounded in data.</li>
+            <li>Clarity and honesty in communication.</li>
+            <li>Empathy for users and teammates.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- MERGED CASE STUDIES -->
+    <section class="section">
+      <div class="section-header">
+        <h2 class="section-title">Case Studies</h2>
+        <p class="section-subtitle">
+          Short, focused breakdowns of campaigns and experiments. Each PDF summarises the challenge,
+          process, and impact.
+        </p>
+      </div>
+
+      <div class="case-list">
+
+        <!-- Case Study 1 -->
+        <article class="card case-card">
+          <div class="case-card-main">
+            <h2 class="card-title">Influencer Marketing for TopCashback</h2>
+            <p class="card-meta">Structured partnership model · +20% monthly user increase</p>
+            <p>
+              Brief summary of the campaign: goals, strategy, results.
+            </p>
             <div class="tag-row">
+              <a href="assets/case-studies/InfluencerProject.pdf" target="_blank" class="tag accent">
+                View PDF case study
+              </a>
             </div>
-          </a>
-          <a href="wellbeing-content.html" class="card" style="text-decoration: none;">
-            <h3 class="card-title">Psychology &amp; Content Marketing</h3>
-            <p>How my UCL psychology studies met digital content at Heyr.</p>
+          </div>
+          <aside class="case-card-sidebar">
+            <div class="case-meta-grid">
+              <div>
+                <strong>Role</strong><br>
+                Digital Marketing Executive
+              </div>
+              <div>
+                <strong>Company</strong><br>
+                TopCashback
+              </div>
+              <div>
+                <strong>Focus</strong><br>
+                Influencer partnerships
+              </div>
+              <div>
+                <strong>Tools</strong><br>
+                Marketing Analytics Dashboard, Influencer Analytics tools, Canva, Meta Business Suite
+              </div>
+            </div>
+          </aside>
+        </article>
+
+        <!-- Case Study 2 -->
+        <article class="card case-card">
+          <div class="case-card-main">
+            <h2 class="card-title">Growth Strategy for TopCashback</h2>
+            <p class="card-meta">Introduced new channel · Structured collaborations</p>
+            <p>
+              Brief summary of the project: approach, execution, impact.
+            </p>
             <div class="tag-row">
+              <a href="assets/case-studies/TelegramMarketing.pdf" target="_blank" class="tag accent">
+                View PDF case study
+              </a>
             </div>
-          </a>
+          </div>
+          <aside class="case-card-sidebar">
+            <div class="case-meta-grid">
+              <div>
+                <strong>Role</strong><br>
+                Digital Marketing Executive
+              </div>
+              <div>
+                <strong>Company</strong><br>
+                TopCashback
+              </div>
+              <div>
+                <strong>Focus</strong><br>
+                Market expansion
+              </div>
+              <div>
+                <strong>Tools</strong><br>
+                SimilarWeb, Google Trends, Canva
+              </div>
+            </div>
+          </aside>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- MERGED CONTENT PORTFOLIO -->
+    <section class="section">
+      <div class="section-header">
+        <h2 class="section-title">Content Portfolio</h2>
+        <p class="section-subtitle">
+          Four sections of personally crafted content. Click any tile to open a dedicated page with more detail.
+        </p>
+      </div>
+
+      <div class="grid grid-2 content-links-grid">
+        <a id="social-content-tile" href="social-content.html" class="card" style="text-decoration: none;">
+          <h2 class="card-title">Social Content</h2>
+          <p>
+            Instagram content design and management for TopCashback Italy, from feed planning to CTA-driven creatives across seasonal and educational campaigns.
+          </p>
+          <div class="tag-row">
+            <span class="tag accent">Learn more →</span>
+          </div>
+        </a>
+
+        <a id="influencer-brief-tile" href="assets/case-studies/InfluencerBrief.pdf" class="card" style="text-decoration: none;" target="_blank" rel="noopener">
+          <h2 class="card-title">Influencer Brief</h2>
+          <p>
+            A sample campaign brief created and used to guide influencers in content creation.
+          </p>
+          <div class="tag-row">
+            <span class="tag accent">Learn more →</span>
+          </div>
+        </a>
+
+        <a id="influencer-script-tile" href="influencer-script.html" class="card" style="text-decoration: none;">
+          <h2 class="card-title">Influencer Script</h2>
+          <p>
+            An influencer script for a student-focused campaign, showcasing engaging, platform-relevant content for social platforms such as TikTok and Instagram.
+          </p>
+          <div class="tag-row">
+            <span class="tag accent">Learn more →</span>
+          </div>
+        </a>
+
+        <a id="psychology-content-tile" href="wellbeing-content.html" class="card" style="text-decoration: none;">
+          <h2 class="card-title">Psychology &amp; Creative Content</h2>
+          <p>
+            How I translated behavioural science, messaging, and audience needs into impactful content.
+          </p>
+          <div class="tag-row">
+            <span class="tag accent">Learn more →</span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION MERGED FROM contact.html -->
+    <section class="section" id="contact">
+      <div class="section-header">
+        <h2 class="section-title">Let’s connect</h2>
+        <p class="section-subtitle">
+          I’m happy to talk about roles in content or digital marketing, or simply share more
+          context on the projects in this portfolio!
+        </p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="card">
+          <h3 class="card-title">Contact details</h3>
+          <div class="contact-methods">
+            <div>
+              <div class="contact-item-label">Email</div>
+              <a class="contact-link" href="mailto:tina.tacconis@gmail.com">
+                tina.tacconis@gmail.com
+              </a>
+            </div>
+            <div>
+              <div class="contact-item-label">LinkedIn</div>
+              <a class="contact-link" href="https://www.linkedin.com/in/martinatacconis/" target="_blank" rel="noopener">
+                linkedin.com/in/martinatacconis
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <aside class="card">
+          <h3 class="card-title">What I can help with</h3>
+          <ul class="about-list" style="list-style: disc; padding-left: 1.25rem;">
+            <li>Producing content that supports the customer journey from awareness to activation.</li>
+            <li>Multi-channel campaign management focused on measurable outcomes.</li>
+            <li>Developing scalable systems for partnerships and collaborations.</li>
+          </ul>
         </aside>
       </div>
     </section>
