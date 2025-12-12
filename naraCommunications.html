@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Nara Communication – PDF</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <style>
+    /* FULL-BLEED PDF VIEWER */
+    .pdf-fullbleed {
+      width: 100vw;
+      margin-left: calc(-50vw + 50%);
+      margin-right: calc(-50vw + 50%);
+      margin-top: 1.5rem;
+    }
+
+    .pdf-fullbleed iframe {
+      width: 100vw;
+      height: 92vh;
+      border: none;
+      border-radius: 0;
+      background: #fff;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.18);
+    }
+
+    @media (max-width: 768px) {
+      .pdf-fullbleed iframe {
+        height: 88vh;
+      }
+    }
+
+    /* Navbar CTA hidden by default */
+    .nav-cta-scroll.is-hidden {
+      display: none;
+    }
+  </style>
+</head>
+
+<body class="page">
+  <!-- HEADER -->
+  <header>
+    <nav class="navbar">
+      <a href="index.html" class="nav-brand">MARTINA S. TACCONIS</a>
+      <div class="nav-links">
+        <a
+          href="index.html"
+          class="nav-cta nav-cta-scroll is-hidden"
+          id="nav-cta-scroll"
+        >
+          Go to portfolio
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- MAIN -->
+  <main class="container">
+    <section class="section">
+      <!-- BIG TOP CTA -->
+      <div
+        id="top-cta"
+        style="text-align:center; margin: 0.25rem 0 1.25rem;"
+      >
+        <a
+          href="index.html"
+          class="btn btn-primary"
+          style="font-size: 1.15rem; padding: 0.95rem 1.6rem;"
+        >
+          Go to portfolio
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- PDF FULL WIDTH -->
+  <div class="pdf-fullbleed">
+    <iframe
+      src="Martina-Tacconis-Nara-Communications.pdf"
+      title="Nara Communication PDF"
+    ></iframe>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <span>© 2025 Martina Silvia Tacconis.</span>
+      <a href="index.html">Back to portfolio</a>
+    </div>
+  </footer>
+
+  <!-- CTA VISIBILITY LOGIC -->
+  <script>
+    (function () {
+      const topCta = document.getElementById("top-cta");
+      const navCta = document.getElementById("nav-cta-scroll");
+      if (!topCta || !navCta) return;
+
+      if ("IntersectionObserver" in window) {
+        const observer = new IntersectionObserver(
+          ([entry]) => {
+            if (entry.isIntersecting) {
+              navCta.classList.add("is-hidden");
+            } else {
+              navCta.classList.remove("is-hidden");
+            }
+          },
+          { threshold: 0.05 }
+        );
+        observer.observe(topCta);
+      } else {
+        // Fallback
+        function onScroll() {
+          const r = topCta.getBoundingClientRect();
+          const visible = r.bottom > 0 && r.top < window.innerHeight;
+          navCta.classList.toggle("is-hidden", visible);
+        }
+        window.addEventListener("scroll", onScroll, { passive: true });
+        window.addEventListener("resize", onScroll);
+        onScroll();
+      }
+    })();
+  </script>
+</body>
+</html>
