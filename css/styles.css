@@ -193,8 +193,14 @@ main {
 }
 
 .pill-dot {
-  width: 7px;
-  height: 7px;
+  /* fixed, consistent dot size (prevents optical resizing on wrapped lines) */
+  width: 8px;
+  height: 8px;
+  min-width: 8px;
+  min-height: 8px;
+  flex: 0 0 8px;
+  aspect-ratio: 1 / 1;
+  display: inline-block;
   border-radius: 999px;
   background: var(--accent);
 }
@@ -1069,3 +1075,10 @@ footer {
         height: 80vh;
       }
     }
+
+    .pill-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem; /* spazio tra le pill */
+  align-items: flex-start; /* allineate a sinistra */
+}
