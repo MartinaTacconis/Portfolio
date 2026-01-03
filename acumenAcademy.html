@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Acumen Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <style>
+    /* ---------- TOP CTA ---------- */
+    .top-cta-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.9rem;
+      margin: 0.25rem 0 1.25rem;
+      flex-wrap: wrap;
+    }
+
+    /* Download: subtle */
+    .top-cta-download {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-size: 0.82rem;
+      padding: 0.45rem 0.85rem;
+      border-radius: 999px;
+      text-decoration: none;
+      color: var(--text-main);
+      background: #ffffff;
+      border: 1px solid var(--border-soft);
+      opacity: 0.85;
+      transition: opacity var(--transition-fast),
+                  background var(--transition-fast),
+                  transform var(--transition-fast);
+      white-space: nowrap;
+    }
+
+    .top-cta-download::before {
+      content: "⬇︎";
+      font-size: 0.9rem;
+    }
+
+    .top-cta-download:hover {
+      opacity: 1;
+      background: #fdf2f8;
+      transform: translateY(-1px);
+    }
+
+    /* ---------- PDF DESKTOP ---------- */
+    .pdf-fullbleed {
+      width: 100vw;
+      margin-left: calc(-50vw + 50%);
+      margin-right: calc(-50vw + 50%);
+      margin-top: 1.2rem;
+    }
+
+    .pdf-fullbleed iframe {
+      width: 100vw;
+      height: 94vh;
+      border: none;
+      background: #fff;
+    }
+
+    /* ---------- NAVBAR CTA ---------- */
+    .nav-cta-scroll.is-hidden {
+      display: none;
+    }
+
+    /* ---------- MOBILE ---------- */
+    .pdf-mobile-actions {
+      display: none;
+      text-align: center;
+      padding: 0 1rem;
+      margin-top: 0; /* important: no extra gap */
+    }
+
+    @media (max-width: 768px) {
+      /* Hide desktop CTA */
+      #top-cta {
+        display: none !important;
+      }
+
+      /* Remove extra spacing from main section so content rises */
+      main.container {
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+      }
+
+      main.container .section {
+        padding: 0 !important;
+        margin: 0 !important;
+      }
+
+      /* Hide desktop PDF block entirely */
+      .pdf-fullbleed {
+        display: none !important;
+        height: 0 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+      }
+
+      .pdf-fullbleed iframe {
+        display: none !important;
+      }
+
+      /* Show mobile UI */
+      .pdf-mobile-actions {
+        display: block !important;
+        padding: 0 1rem !important;
+        margin-top: 0.75rem !important;
+      }
+    }
+  </style>
+</head>
+
+<body class="page">
+  <!-- HEADER -->
+  <header>
+    <nav class="navbar">
+      <a href="index.html" class="nav-brand">MARTINA S. TACCONIS</a>
+      <div class="nav-links">
+        <a
+          href="index.html"
+          class="nav-cta nav-cta-scroll is-hidden"
+          id="nav-cta-scroll"
+        >
+          Go to portfolio
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- MAIN -->
+  <main class="container">
+    <section class="section">
+      <!-- TOP CTA (DESKTOP ONLY) -->
+      <div id="top-cta" class="top-cta-row">
+        <a
+          href="index.html"
+          class="btn btn-primary"
+          style="font-size: 1.15rem; padding: 0.95rem 1.6rem;"
+        >
+          Go to portfolio
+        </a>
+
+        <a
+          href="Martina-S-Tacconis-Acumen-Academy.pdf"
+          class="top-cta-download"
+          download
+        >
+          Download PDF
+        </a>
+      </div>
+
+      <!-- MOBILE DEDICATED (INSIDE MAIN so footer stays down) -->
+      <div class="pdf-mobile-actions">
+        <div class="btn-row" style="justify-content:center;">
+          <a href="index.html" class="btn btn-primary">Go to portfolio</a>
+          <a
+            href="Martina-S-Tacconis-Acumen-Academy.pdf"
+            target="_blank"
+            rel="noopener"
+            class="btn btn-outline"
+          >
+            Open PDF
+          </a>
+        </div>
+
+        <a
+          href="Martina-S-Tacconis-Acumen-Academy.pdf"
+          target="_blank"
+          rel="noopener"
+          style="display:block;"
+        >
+          <img
+            src="assets/images/NaraPreview.png"
+            alt="Nara Communication PDF preview"
+            style="max-width:520px;width:100%;height:auto;margin:1rem auto 0;display:block;border-radius:12px;box-shadow:var(--shadow-soft);border:1px solid var(--border-soft);"
+          />
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- DESKTOP PDF -->
+  <div class="pdf-fullbleed">
+    <iframe
+      src="Martina-S-Tacconis-Acumen-Academy.pdf"
+      title="Nara Communication PDF"
+    ></iframe>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <span>© 2025 Martina Silvia Tacconis.</span>
+    </div>
+  </footer>
+
+  <!-- CTA VISIBILITY LOGIC -->
+  <script>
+    (function () {
+      const topCta = document.getElementById("top-cta");
+      const navCta = document.getElementById("nav-cta-scroll");
+      if (!topCta || !navCta) return;
+
+      if ("IntersectionObserver" in window) {
+        const observer = new IntersectionObserver(
+          ([entry]) => {
+            navCta.classList.toggle("is-hidden", entry.isIntersecting);
+          },
+          { threshold: 0.05 }
+        );
+        observer.observe(topCta);
+      }
+    })();
+  </script>
+</body>
+</html>
